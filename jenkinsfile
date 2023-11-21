@@ -1,6 +1,7 @@
 // Declarative //
 pipeline {
     agent {label 'ubuntu'}
+    options {timestamp()}
     stages {
         stage('Example') {
             steps {
