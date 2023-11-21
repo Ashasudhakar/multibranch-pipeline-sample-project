@@ -1,9 +1,9 @@
 properties ([
     parameters ([
         stringParam (
+            name: 'host_name',
             defaultValue: '',
-            description: 'name of the server',
-            name: 'servername'
+            description: 'name of the server'
         ),
         stringParam (
             name: 'user_name',
