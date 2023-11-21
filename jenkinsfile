@@ -1,11 +1,13 @@
 // Declarative //
 pipeline {
-    agent any
+    agent {label 'ubuntu'}
     stages {
         stage('Example') {
             steps {
+                sh '''
+                date
                 echo 'Hello World'
-                echo 'date'
+                '''
             }
         }
     }
