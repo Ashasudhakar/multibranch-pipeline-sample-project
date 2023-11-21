@@ -1,19 +1,19 @@
 properties ([
     parameters ([
         stringParam {
-            name: "host-name",
-            defaultValue: "",
-            description: "name of the server"
+            name: 'host_name',
+            defaultValue: '',
+            description: 'name of the server'
         },
         stringParam {
-            name: "user-name",
-            defaultValue: "",
-            description: "name of the user"
+            name: 'user_name',
+            defaultValue: '',
+            description: 'name of the user'
         },
         stringParam {
-            name: "password",
-            defaultValue: "",
-            description: "password of the user"
+            name: 'password',
+            defaultValue: '',
+            description: 'password of the user'
         }
 
 
@@ -28,8 +28,8 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                echo "name of the server ${params.host-name}"
-                echo "name of the user ${params.user-name}"
+                echo "name of the server ${params.host_name}"
+                echo "name of the user ${params.user_name}"
                 echo "password of the user ${params.password}"
             }
         }
