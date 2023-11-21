@@ -1,20 +1,20 @@
 properties ([
     parameters ([
-        stringParam {
+        stringParam (
             defaultValue: '',
             description: 'name of the server',
             name: 'servername'
-        },
-        stringParam {
+        ),
+        stringParam (
             name: 'user_name',
             defaultValue: '',
             description: 'name of the user'
-        },
-        stringParam {
+        ),
+        stringParam (
             name: 'password',
             defaultValue: '',
             description: 'password of the user'
-        }
+        )
     ])
 ])
 
