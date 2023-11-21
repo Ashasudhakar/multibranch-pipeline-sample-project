@@ -1,14 +1,36 @@
+properties ([
+    parameters ([
+        stringParam {
+            name: "host_name",
+            defaultValue: "",
+            description: "name of the server"
+        },
+        stringParam {
+            name: "user_name",
+            defaultValue: "",
+            description: "name of the user"
+        },
+        stringParam {
+            name: "password",
+            defaultValue: "",
+            description: "password of the user"
+        }
+
+
+    ])
+])
+
 // Declarative //
 pipeline {
     agent {label 'ubuntu'}
     options {timestamps()}
+    
     stages {
         stage('Example') {
             steps {
-                sh '''
-                date
-                echo 'Hello World'
-                '''
+                echo "name of the server ${params.host_name}"
+                echo "name of the user ${params.user_name}"
+                echo "password of the user ${params.password}"
             }
         }
     }
