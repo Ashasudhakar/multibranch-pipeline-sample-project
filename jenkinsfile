@@ -1,9 +1,9 @@
 properties ([
     parameters ([
         stringParam {
-            name: 'host_name',
             defaultValue: '',
-            description: 'name of the server'
+            description: 'name of the server',
+            name: 'servername'
         },
         stringParam {
             name: 'user_name',
@@ -15,8 +15,6 @@ properties ([
             defaultValue: '',
             description: 'password of the user'
         }
-
-
     ])
 ])
 
