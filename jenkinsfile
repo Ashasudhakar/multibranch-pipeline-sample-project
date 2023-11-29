@@ -29,9 +29,11 @@ pipeline {
                 echo "name of the server ${params.host_name}"
                 echo "name of the user ${params.user_name}"
                 echo "password of the user ${params.password}"
-                ansiblePlaybook (
-                    become: true, inventory: 'plays/inventory.ini', playbook: 'plays/playbook.yml'
-                ) 
+                script{
+                    ansiblePlaybook (
+                        become: true, inventory: 'plays/inventory.ini', playbook: 'plays/playbook.yml'
+                    )
+                } 
             }
         }
     }
