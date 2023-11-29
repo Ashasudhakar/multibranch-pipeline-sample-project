@@ -1,0 +1,7 @@
+- name: My first play
+  hosts: apache
+  
+  tasks:
+    - name: Install  apache2
+      become: true
+      apt: name=apache2 update_cache=yes state=latest
