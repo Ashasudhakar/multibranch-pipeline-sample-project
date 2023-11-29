@@ -29,6 +29,12 @@ pipeline {
                 echo "name of the server ${params.host_name}"
                 echo "name of the user ${params.user_name}"
                 echo "password of the user ${params.password}"
+
+                sed -i "s|HOSTNAME|${params.host_name}|g" plays/inventory.ini
+                sed -i "s|USERNAME|${params.user_name}|g" plays/inventory.ini
+                sed -i "s|PASSWORD|${params.password}|g" plays/inventory.ini
+                
+
                 script{
                     ansiblePlaybook (
                         become: true, inventory: 'plays/inventory.ini', playbook: 'plays/playbook.yml'
